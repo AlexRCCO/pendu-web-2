@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pendu</title>
+  </head>
+  <body>
+
+    <div class="input">
+      <h1>PENDU</h1>
+      <input type="text" id="lettre" name="" value="">
+      <h2 id="mot"><span id="point" style="border-width=2px"></span></h2>
+
+
+    </div>
+
+    <script type="text/javascript">
+    var motTab = ["professeur", "classe", "école", "bonjour", "tableau"];
+    var input = document.getElementById('lettre');
+    var random = motTab[Math.floor(Math.random()*5)];
+    var nombreLettre = random.length;
+    var point = document.getElementById('point');
+    var lettre = random.split('')
+
+
+    for (var i = 0; i < random.length; i++) {
+      point.innerHTML += "_ ";
+    }
+
+    input.addEventListener('keyup', function () {
+      console.log(input.value);
+      if (input.value == lettre) {
+         point.innerHTML === input.value;
+         console.log(point);
+
+      }
+
+
+
+
+
+    })
+
+
+    </script>
+
+  </body>
+</html>
